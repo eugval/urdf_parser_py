@@ -1,9 +1,8 @@
-from setuptools import setup
-from catkin_pkg.python_setup import generate_distutils_setup
+#!/usr/bin/env python
 
-d = generate_distutils_setup(
-    packages=['urdf_parser_py', 'urdf_parser_py.xml_reflection'],
-    package_dir={'': 'src'}
+from setuptools import setup, find_packages
+
+setup(name='urdf_parser_py',
+      version='0.0.1',
+      packages= find_packages()
 )
-
-setup(**d)
